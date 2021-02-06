@@ -1,12 +1,8 @@
+import { NextPage } from "next";
 import Head from "next/head";
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>About YAMAO</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-    </>
-  );
-}
+const Home: NextPage = () => {
+  return <></>;
+};
+
+export default Home;
