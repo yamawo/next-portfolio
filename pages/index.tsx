@@ -1,12 +1,12 @@
 import styles from "./index.module.css";
 import { NextPage } from "next";
-import Head from "next/head";
+import { Browser } from "../components";
 
 const Home: NextPage = () => {
   return (
     <>
-      <div className={styles.screen}>
-        <p>aaaaaaaaaaa</p>
+      <div className={`${styles.screen} w-screen h-screen`}>
+        <Browser />
       </div>
     </>
   );
