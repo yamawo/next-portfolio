@@ -1,7 +1,8 @@
-.height_lap {
+.size_lap {
+  width: 1000px;
   height: 600px;
 }
 
-.height_mob {
+.size_mob {
   height: 440px;
 }
