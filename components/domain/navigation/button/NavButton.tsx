@@ -1,3 +1,4 @@
+import styles from "./NavButton.module.css";
 import * as React from "react";
 
 interface Props {
@@ -17,9 +18,13 @@ export const NavButton: React.FC<Props> = ({ type, onClickDeleteButton, onClickM
 
   return (
     <>
-      {type === "delete" ? <button onClick={handleClickDelete}>x</button> : null}
-      {type === "minimize" ? <button onClick={handleClickMinimize}>-</button> : null}
-      {type === "maximize" ? <button></button> : null}
+      {type === "delete" ? (
+        <button className={`bg-red-500 first:ml-4  ${styles.circle_button}`} onClick={handleClickDelete} />
+      ) : null}
+      {type === "minimize" ? (
+        <button className={`bg-yellow-500 ${styles.circle_button}`} onClick={handleClickMinimize} />
+      ) : null}
+      {type === "maximize" ? <button className={`bg-green-500 last:mr-4 ${styles.circle_button}`} /> : null}
     </>
   );
 };

@@ -1,0 +1,8 @@
+.circle_button {
+  width: 12px;
+  height: 12px;
+  line-height: 7px;
+  font-size: 5px;
+
+  @apply inline-block no-underline rounded-lg text-center mx-1 my-3;
+}

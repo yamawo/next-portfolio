@@ -26,6 +26,7 @@ export const Browser: React.FC = () => {
       <div className={`bg-gray-200 ${styles.size_lap} rounded-lg shadow-lg md: container md:${styles.size_mob}`}>
         <NavButton type={DELETE} onClickDeleteButton={handleClickDeleteButton} />
         <NavButton type={MINIMIZE} onClickMinimizeButton={handleClickMinimizeButton} />
+        <NavButton type={MAXIMIZE} />
       </div>
     </div>
   );
