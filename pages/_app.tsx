@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
 
     switch (pathName) {
       case "/":
-        return "トップページ | portfolio";
+        return "portfolio";
 
       default:
         return "portfolio";
