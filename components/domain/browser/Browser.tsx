@@ -8,6 +8,10 @@ export const Browser: React.FC = () => {
   const MINIMIZE = "minimize";
   const MAXIMIZE = "maximize";
 
+  const commonBrowserStyle = `bg-gray-200 rounded-lg shadow-lg -my-0 mx-auto`;
+
+  const [selectedTabNumber, setSelectedTabNuber] = React.useState<number>(1);
+  const [isMaximize, setIsMaximize] = React.useState<boolean>(false);
   const hiddenBrowserComponent = useHidden(false);
 
   const handleClickDeleteButton = React.useCallback((): void => {
@@ -19,14 +23,29 @@ export const Browser: React.FC = () => {
     hiddenBrowserComponent.doHidden();
   }, [hiddenBrowserComponent]);
 
+  const handleClickMaximizeButton = React.useCallback(() => {
+    setIsMaximize(!isMaximize);
+  }, [isMaximize]);
+
   return hiddenBrowserComponent.isHidden ? (
     <></>
   ) : (
     <div className="w-full h-full flex items-center">
-      <div className={`bg-gray-200 ${styles.size_lap} rounded-lg shadow-lg md: container md:${styles.size_mob}`}>
-        <NavButton type={DELETE} onClickDeleteButton={handleClickDeleteButton} />
-        <NavButton type={MINIMIZE} onClickMinimizeButton={handleClickMinimizeButton} />
-        <NavButton type={MAXIMIZE} />
+      <div
+        className={
+          isMaximize
+            ? `${styles.full_screen} ${commonBrowserStyle}`
+            : `${commonBrowserStyle} ${styles.size_lap} md:${styles.size_mob}`
+        }
+      >
+        <div className={``}>
+          <div>
+            <NavButton type={DELETE} onClickDeleteButton={handleClickDeleteButton} />
+            <NavButton type={MINIMIZE} onClickMinimizeButton={handleClickMinimizeButton} />
+            <NavButton type={MAXIMIZE} onClickMaximizeButton={handleClickMaximizeButton} />
+          </div>
+          <div></div>
+        </div>
       </div>
     </div>
   );
