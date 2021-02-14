@@ -4,5 +4,5 @@
   line-height: 7px;
   font-size: 5px;
 
-  @apply inline-block no-underline rounded-lg text-center mx-1 my-3;
+  @apply inline-block no-underline rounded-lg text-center mt-3 mx-1 mb-4;
 }

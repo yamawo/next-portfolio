@@ -38,7 +38,7 @@ export const Browser: React.FC = () => {
             : `${commonBrowserStyle} ${styles.size_lap} md:${styles.size_mob}`
         }
       >
-        <div className={``}>
+        <div className={`w-full h-10 flex bg-gray-300 rounded-lg`}>
           <div>
             <NavButton type={DELETE} onClickDeleteButton={handleClickDeleteButton} />
             <NavButton type={MINIMIZE} onClickMinimizeButton={handleClickMinimizeButton} />
