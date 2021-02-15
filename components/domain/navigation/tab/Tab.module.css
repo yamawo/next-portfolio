@@ -48,10 +48,10 @@
 
 .radian_left {
   border-bottom-right-radius: 100px 100px;
-  @apply bg-gray-200 w-2.5 h-2.5 mr-auto;
+  @apply bg-gray-300 w-2.5 h-2.5 mr-auto;
 }
 
 .radian_right {
   border-bottom-left-radius: 100px 100px;
-  @apply bg-gray-200 w-2.5 h-2.5;
+  @apply bg-gray-300 w-2.5 h-2.5;
 }

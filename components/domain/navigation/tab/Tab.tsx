@@ -27,12 +27,14 @@ export const Tab: React.FC<Props> = ({ selectedTabNumber, onClickTab }) => {
             <p className={`${styles.content_text}`}>{t}</p>
             <button className={`${styles.tab_content_button}`}>×</button>
           </div>
-          <div className={`${styles.tab_bottom}`}>
-            <div className={`${styles.tab_bottom_bar}`}>
-              <div className={`${styles.radian_left}`}></div>
-              <div className={`${styles.radian_right}`}></div>
+          {selectedTabNumber === index ? (
+            <div className={`${styles.tab_bottom}`}>
+              <div className={`${styles.tab_bottom_bar}`}>
+                <div className={`${styles.radian_left}`}></div>
+                <div className={`${styles.radian_right}`}></div>
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       ))}
     </>
