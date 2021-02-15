@@ -1,0 +1,57 @@
+.tab {
+  width: 120px;
+  height: 100%;
+  cursor: pointer;
+  @apply flex flex-col justify-end;
+}
+
+.tab_content {
+  width: 120px;
+  z-index: 1;
+  @apply flex flex-row py-1.5 px-0 rounded-t-lg justify-start;
+}
+
+.content_text {
+  font-size: 12px;
+  line-height: 18px;
+  @apply px-3 m-0 mr-auto;
+}
+
+.tab_content_button {
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+  font-size: 14px;
+  line-height: initial;
+  outline: none !important;
+  @apply bg-transparent mx-1 rounded-xl hover:bg-gray-300;
+}
+
+.selected {
+  z-index: 10;
+  height: 32px;
+  top: 8px;
+  @apply relative bg-gray-200 rounded-t-lg;
+}
+
+.tab_bottom {
+  top: -10px;
+  left: -10px;
+  @apply relative w-0 h-0;
+}
+
+.tab_bottom_bar {
+  width: 140px;
+  height: 10px;
+  @apply bg-gray-200 flex justify-start;
+}
+
+.radian_left {
+  border-bottom-right-radius: 100px 100px;
+  @apply bg-gray-200 w-2.5 h-2.5 mr-auto;
+}
+
+.radian_right {
+  border-bottom-left-radius: 100px 100px;
+  @apply bg-gray-200 w-2.5 h-2.5;
+}

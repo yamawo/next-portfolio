@@ -6,7 +6,7 @@ import * as React from "react";
 const Home: NextPage = () => {
   return (
     <>
-      <div className={`${styles.screen} w-screen h-screen`}>
+      <div className={`${styles.screen} w-screen h-screen bg-cover`}>
         <Browser />
       </div>
     </>

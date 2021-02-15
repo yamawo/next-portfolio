@@ -3,6 +3,7 @@
   height: 12px;
   line-height: 7px;
   font-size: 5px;
+  outline: none !important;
 
   @apply inline-block no-underline rounded-lg text-center mt-3 mx-1 mb-4;
 }

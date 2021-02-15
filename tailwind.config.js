@@ -10,6 +10,7 @@ module.exports = {
   variants: {
     extend: {
       margin: ["first", "last"],
+      backgroundColor: ["hover"],
     },
   },
   plugins: [],
