@@ -5,6 +5,13 @@
   @apply flex flex-col justify-end;
 }
 
+.tab:hover {
+  z-index: 4;
+  height: 32px;
+  top: 8px;
+  @apply relative bg-gray-200 rounded-t-lg;
+}
+
 .tab_content {
   width: 120px;
   z-index: 1;
@@ -28,7 +35,7 @@
 }
 
 .selected {
-  z-index: 10;
+  z-index: 3;
   height: 32px;
   top: 8px;
   @apply relative bg-gray-200 rounded-t-lg;

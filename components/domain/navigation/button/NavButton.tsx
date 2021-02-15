@@ -4,8 +4,8 @@ import * as React from "react";
 interface Props {
   type: "delete" | "minimize" | "maximize";
   onClickDeleteButton?: () => void;
-  onClickMaximizeButton?: () => void;
   onClickMinimizeButton?: () => void;
+  onClickMaximizeButton?: () => void;
 }
 
 export const NavButton: React.FC<Props> = ({
@@ -18,13 +18,13 @@ export const NavButton: React.FC<Props> = ({
     onClickDeleteButton();
   }, [onClickDeleteButton]);
 
-  const handleClickMaximize = React.useCallback(() => {
-    onClickMaximizeButton();
-  }, [onClickMaximizeButton]);
-
   const handleClickMinimize = React.useCallback(() => {
     onClickMinimizeButton();
   }, [onClickMinimizeButton]);
+
+  const handleClickMaximize = React.useCallback(() => {
+    onClickMaximizeButton();
+  }, [onClickMaximizeButton]);
 
   return (
     <>

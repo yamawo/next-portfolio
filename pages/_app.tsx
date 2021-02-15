@@ -7,11 +7,15 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const router = useRouter();
   const buildTitle = (): string => {
     const pathName = router.pathname;
-
     switch (pathName) {
       case "/":
         return "portfolio";
-
+      case "/home":
+        return "HOME | portfolio";
+      case "/skills":
+        return "SKILLS | portfolio";
+      case "/works":
+        return "WORKS | portfolio";
       default:
         return "portfolio";
     }
