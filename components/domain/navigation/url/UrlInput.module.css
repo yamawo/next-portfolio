@@ -1,0 +1,8 @@
+.url_input {
+  width: 800px;
+  height: 30px;
+  font-size: 12px;
+  outline: none !important;
+
+  @apply bg-gray-300 px-2.5 py-2 rounded-xl;
+}

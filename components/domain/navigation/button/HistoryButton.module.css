@@ -1,4 +1,5 @@
 .history_button_container {
+  width: 107px;
   min-width: 100px;
   @apply justify-around;
 }

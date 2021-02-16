@@ -1,3 +1,5 @@
+import { TabNumber } from "../models";
+
 export class TabService {
   /**
    * 元の配列を元に、 0 から始まる number の配列を生成する
@@ -16,7 +18,7 @@ export class TabService {
    * @param targetTabNumber 今回削除されたタブの数字
    * @param tabList 元になるタブの配列
    */
-  public static selectNextTab = (currentTabAry: number[], targetTabNumber: number, tabList: string[]): number => {
+  public static selectNextTab = (currentTabAry: number[], targetTabNumber: number): TabNumber => {
     let nextSetTabNumber = null;
     let minAbsValue = null;
     currentTabAry.forEach((v) => {

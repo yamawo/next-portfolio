@@ -11,15 +11,15 @@ export const HistoryButton: React.FC = () => {
 
   const router = useRouter();
 
-  const handleClickBrowserback = React.useCallback(() => {
+  const handleClickBrowserback = React.useCallback((): void => {
     router.back();
   }, [router]);
 
-  const handleClickBrowserForward = React.useCallback(() => {
+  const handleClickBrowserForward = React.useCallback((): void => {
     history.forward();
   }, []);
 
-  const handleClickReload = React.useCallback(() => {
+  const handleClickReload = React.useCallback((): void => {
     router.reload();
   }, [router]);
 
