@@ -1,7 +1,7 @@
+import "../styles/globals.css";
 import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const router = useRouter();

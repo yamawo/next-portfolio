@@ -4,6 +4,8 @@ import { NavButton } from "../navigation/button/NavButton";
 import { Tab } from "../navigation/tab/Tab";
 import { TabNumber } from "../../../models";
 import * as React from "react";
+import { HistoryButton } from "../navigation/button/HistoryButton";
+import { UrlInput } from "../navigation/url/UrlInput";
 
 export const Browser: React.FC = () => {
   const DELETE = "delete";
@@ -56,6 +58,12 @@ export const Browser: React.FC = () => {
           <div className={`flex justify-start`}>
             <Tab selectedTabNumber={selectedTabNumber} onClickTab={handleClickTab} />
           </div>
+        </div>
+        <div className={`w-full h-10 flex items-center`}>
+          <HistoryButton />
+        </div>
+        <div>
+          <UrlInput />
         </div>
       </div>
     </div>

@@ -1,0 +1,22 @@
+.history_button_container {
+  min-width: 100px;
+  @apply justify-around;
+}
+
+.history_button {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  outline: none !important;
+  @apply rounded-2xl ml-1 cursor-default hover:bg-gray-300;
+}
+
+.arrow_button {
+  top: 2px !important;
+  @apply relative;
+}
+
+.reload_button {
+  top: 1.8px !important;
+  @apply relative;
+}
