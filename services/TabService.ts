@@ -17,20 +17,30 @@ export class TabService {
    * @param tabList 元になるタブの配列
    */
   public static selectNextTab = (currentTabAry: number[], targetTabNumber: number, tabList: string[]): number => {
-    if (targetTabNumber === tabList.length) {
-      return currentTabAry.slice(-1)[0];
-    }
-
-    let nextSetTabNumber;
-    let tmp;
-    currentTabAry.forEach((v, index) => {
+    let nextSetTabNumber = null;
+    let minAbsValue = null;
+    currentTabAry.forEach((v) => {
       let diff = v - targetTabNumber;
-      if (index === 0) {
-        tmp = diff;
+      let tmp = diff < 0 ? -diff : diff;
+
+      // 全ての currentTabAry が targetTabNumber より小さかった場合に返す、
+      // 絶対値が最も小さいタブの番号を格納しておく
+      if (!minAbsValue || tmp < minAbsValue) {
+        minAbsValue = v;
+      }
+
+      if (diff < 0 || diff === 0) return;
+      if (!nextSetTabNumber) {
+        nextSetTabNumber = v;
       } else {
-        // tmp がマイナスかどうかみわけなあかん
-        if (tmp < diff) return;
+        if (nextSetTabNumber < diff) return;
+        nextSetTabNumber = v;
       }
     });
+    // 全ての currentTabAry が targetTabNumber より小さかった場合、絶対値が最も小さいタブの番号を返す
+    if (!nextSetTabNumber) {
+      nextSetTabNumber = minAbsValue;
+    }
+    return nextSetTabNumber;
   };
 }
