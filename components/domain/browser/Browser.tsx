@@ -1,7 +1,7 @@
 import styles from "./Browser.module.css";
 import { useHidden } from "../../../hooks";
 import { TabNumber } from "../../../models";
-import { BookMarkIcon, HistoryButton, NavButton, Tab, UrlInput } from "..";
+import { BookMarkIcon, HistoryButton, NavButton, Tab, UrlInput, Content } from "..";
 import * as React from "react";
 
 export const Browser: React.FC = () => {
@@ -55,27 +55,32 @@ export const Browser: React.FC = () => {
             : `${commonBrowserStyle} ${styles.size_lap} md:${styles.size_mob}`
         }
       >
-        <div className={`w-full h-10 flex bg-gray-300 rounded-t-lg`}>
-          <div className={`${styles.nav_button}`}>
-            <NavButton type={DELETE} onClickDeleteButton={handleClickDeleteButton} />
-            <NavButton type={MINIMIZE} onClickMinimizeButton={handleClickMinimizeButton} />
-            <NavButton type={MAXIMIZE} onClickMaximizeButton={handleClickMaximizeButton} />
+        <div className={`w-full h-28`}>
+          <div className={`w-full h-10 flex bg-gray-300 rounded-t-lg`}>
+            <div className={`${styles.nav_button}`}>
+              <NavButton type={DELETE} onClickDeleteButton={handleClickDeleteButton} />
+              <NavButton type={MINIMIZE} onClickMinimizeButton={handleClickMinimizeButton} />
+              <NavButton type={MAXIMIZE} onClickMaximizeButton={handleClickMaximizeButton} />
+            </div>
+            <div className={`flex justify-start`}>
+              <Tab
+                selectedTabNumber={selectedTabNumber}
+                deletedTabAry={deletedTabAry}
+                onClickTab={handleClickTab}
+                onClickDeleteTab={handleClickDeleteTabButton}
+              />
+            </div>
           </div>
-          <div className={`flex justify-start`}>
-            <Tab
-              selectedTabNumber={selectedTabNumber}
-              deletedTabAry={deletedTabAry}
-              onClickTab={handleClickTab}
-              onClickDeleteTab={handleClickDeleteTabButton}
-            />
+          <div className={`w-full h-10 flex items-center`}>
+            <HistoryButton />
+            <UrlInput onClickTab={handleClickTab} />
+          </div>
+          <div className={`${styles.book_mark}`}>
+            <BookMarkIcon />
           </div>
         </div>
-        <div className={`w-full h-10 flex items-center`}>
-          <HistoryButton />
-          <UrlInput onClickTab={handleClickTab} />
-        </div>
-        <div className={`${styles.book_mark}`}>
-          <BookMarkIcon />
+        <div className={isMaximize ? `${styles.content_full}` : `${styles.content}`}>
+          <Content selectedTabNumber={selectedTabNumber} isMaximize={isMaximize} />
         </div>
       </div>
     </div>

@@ -53,9 +53,8 @@ export const Tab: React.FC<Props> = ({ selectedTabNumber, deletedTabAry, onClick
             className={selectedTabNumber === index ? `${styles.selected} ${styles.tab}` : `${styles.tab}`}
           >
             <div data-id={index} className={`${styles.tab_content}`} onClick={handleClickTab}>
-              <Link href={`/${t.toLowerCase()}`} replace>
-                <a className={`${styles.content_text}`}>{t}</a>
-              </Link>
+              {/* TODO: URL同期させる */}
+              <a className={`${styles.content_text}`}>{t}</a>
               <button data-id={index} className={`${styles.tab_content_button}`} onClick={handleClickDeleteButton}>
                 ×
               </button>

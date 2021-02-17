@@ -1,0 +1,71 @@
+.content_container {
+  width: 800px;
+  margin: 50px auto;
+  @apply font-sans;
+}
+
+.content_container_full {
+  width: 950px;
+  margin: 50px auto;
+  @apply font-sans;
+}
+
+.headline {
+  font-size: 30px;
+  @apply flex items-center font-bold text-left;
+}
+
+.headline:not(:first-child) {
+  @apply mt-20;
+}
+
+.profile {
+  @apply flex w-full mt-2;
+}
+
+.profile_title {
+  font-size: 12px;
+  @apply text-left ml-10 font-semibold;
+}
+
+.profile_text {
+  font-size: 12px;
+  @apply ml-20 mt-3;
+}
+
+.about_text {
+  font-size: 12px;
+  @apply mt-3;
+}
+
+.skill {
+  @apply w-full mt-4;
+}
+
+.skill_title {
+  font-size: 16px;
+  @apply mt-6;
+}
+
+.skill_item {
+  font-size: 12px;
+  color: #696969;
+  @apply mt-3;
+}
+
+.skill_text {
+  font-size: 12px;
+  @apply ml-5 mt-3;
+}
+
+.work_title {
+  font-size: 18px;
+  text-decoration: none;
+  color: #5f9ea0;
+  @apply ml-2 mt-6;
+}
+
+.work_text {
+  font-size: 14px;
+  @apply ml-5 mt-3;
+}
