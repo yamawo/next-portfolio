@@ -5,6 +5,7 @@
   border-radius: 10px;
   transition: 0.5s;
   overflow: visible;
+  outline: none !important;
 
   @apply hover:bg-gray-300 flex items-center cursor-default;
 }
