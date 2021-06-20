@@ -5,9 +5,9 @@ import { BookMarkIcon, HistoryButton, NavButton, Tab, UrlInput, Content } from "
 import * as React from "react";
 
 export const Browser: React.FC = () => {
-  const DELETE = "delete";
-  const MINIMIZE = "minimize";
-  const MAXIMIZE = "maximize";
+  const DELETE = "delete" as const;
+  const MINIMIZE = "minimize" as const;
+  const MAXIMIZE = "maximize" as const;
   const TAB_LIST_LENGTH = 3;
 
   const commonBrowserStyle = `bg-gray-200 rounded-lg shadow-lg -my-0 mx-auto`;

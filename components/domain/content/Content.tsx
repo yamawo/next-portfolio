@@ -92,7 +92,7 @@ export const Content: React.FC<Props> = ({ selectedTabNumber, isMaximize }) => {
       ) : null}
       {selectedTabNumber === WORKS_TAB_NUMBER ? (
         <div className={isMaximize ? `${styles.content_container_full}` : `${styles.content_container}`}>
-          <h2 className={`${styles.headline}`}># portfolio</h2>
+          <h2 className={`${styles.headline}`}># Portfolio</h2>
           <div className={`${styles.skill}`}>
             <div>
               <dl className={`mt-2`}>

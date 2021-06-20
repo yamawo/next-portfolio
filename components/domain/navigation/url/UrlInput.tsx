@@ -22,7 +22,6 @@ export const UrlInput: React.FC<Props> = () => {
       if (e.key === "Enter") {
         const url = e.currentTarget.value;
         const targetUrl = url.substr(url.lastIndexOf("/") + 1);
-        console.log(targetUrl);
         if (targetUrl === MY_URL) return;
         router.push(`/${targetUrl}`);
       }
