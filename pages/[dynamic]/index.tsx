@@ -17,7 +17,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       dynamic: `${index}`,
     },
   }));
-
+  console.log({ paths });
   return { paths, fallback: false };
 };
 

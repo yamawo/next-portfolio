@@ -1,5 +1,6 @@
-import { createCanvas } from "canvas";
+import { createCanvas, loadImage, registerFont } from "canvas";
 import { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
 
 const createOgp = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   // OGP の推奨サイズ
@@ -8,10 +9,21 @@ const createOgp = async (req: NextApiRequest, res: NextApiResponse): Promise<voi
   const DX = 0 as const;
   const DY = 0 as const;
   const canvas = createCanvas(WIDTH, HEIGHT);
+
   const ctx = canvas.getContext("2d");
+  const backgroundImage = await loadImage(path.resolve("./public/assets/pngs/ogp_background_image.png"));
+  ctx.drawImage(backgroundImage, DX, DY, WIDTH, HEIGHT);
+
+  registerFont(path.resolve("./public/fonts/NotoSansJP-Light.otf"), {
+    family: "NotoSansJP-Light",
+  });
 
   ctx.fillStyle = "#FFF";
-  ctx.fillRect(DX, DY, WIDTH, HEIGHT);
+  ctx.font = "60px ipagp";
+  ctx.fillStyle = "#000000";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("わしはOGP画像を生成したい！！！！！", 600, 300);
 
   const buffer = canvas.toBuffer();
 
