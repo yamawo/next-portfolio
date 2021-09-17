@@ -50,7 +50,9 @@ export const Tab: React.FC<Props> = ({ selectedTabNumber, deletedTabAry, onClick
         deletedTabAry.includes(index as TabNumber) ? null : (
           <div
             key={index}
-            className={selectedTabNumber === index ? `${styles.selected} ${styles.tab}` : `${styles.tab}`}
+            className={selectedTabNumber === index ? `${styles.tab}` : `${styles.tab}`}
+            role="tab"
+            aria-selected={selectedTabNumber === index ? "true" : "false"}
           >
             <div data-id={index} className={`${styles.tab_content}`} onClick={handleClickTab}>
               {/* TODO: URL同期させる */}

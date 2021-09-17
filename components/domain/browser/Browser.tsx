@@ -62,7 +62,7 @@ export const Browser: React.FC = () => {
               <NavButton type={MINIMIZE} onClickMinimizeButton={handleClickMinimizeButton} />
               <NavButton type={MAXIMIZE} onClickMaximizeButton={handleClickMaximizeButton} />
             </div>
-            <div className={`flex justify-start`}>
+            <div className={`flex justify-start`} role="tablist">
               <Tab
                 selectedTabNumber={selectedTabNumber}
                 deletedTabAry={deletedTabAry}

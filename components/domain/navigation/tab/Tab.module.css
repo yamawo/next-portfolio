@@ -5,6 +5,13 @@
   @apply flex flex-col justify-end;
 }
 
+.tab[aria-selected="true"] {
+  z-index: 3;
+  height: 32px;
+  top: 8px;
+  @apply relative bg-gray-200 rounded-t-lg;
+}
+
 .tab:hover {
   z-index: 4;
   height: 32px;
